@@ -1,0 +1,11 @@
+**/target/
+**/.classpath
+**/.project
+**/.settings/
+**/.dubbo
+**/app/**
+**/.idea/**.xml
+**/.idea/**
+**/*.iml
+**/.DS_Store
+/report-service/logs/
