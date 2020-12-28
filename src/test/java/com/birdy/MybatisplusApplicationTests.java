@@ -25,14 +25,25 @@ class MybatisplusApplicationTests {
     @Test
     void testInsert(){
         User user = new User();
-        user.setName("莉香");
+        user.setName("三上");
         user.setAge(23);
-        user.setEmail("lixiang@qq.com");
+        user.setEmail("sanshang@qq.com");
 
         int result = userMapper.insert(user); // 帮我们自动生成id
         System.out.println(result); // 受影响的行数
         System.out.println("================");
         System.out.println(user); // 发现，id会自动回填
+    }
+
+    @Test
+    void testUpdate(){
+        User user = new User();
+        user.setId(4L);
+        user.setAge(23);
+        int updateById = userMapper.updateById(user);
+        System.out.println("===============");
+        System.out.println(user);
+
     }
 
 }
